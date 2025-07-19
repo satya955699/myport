@@ -4,6 +4,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Contact() {
   return (
@@ -40,6 +41,13 @@ function Contact() {
             </Box>
           </Box>
           <Box className="bg-[#3C3C3D] rounded-xl p-6 flex items-center gap-4">
+            <InstagramIcon className="text-amber-400 text-4xl" />
+            <Box>
+              <Typography variant="h6" className="font-semibold">Instagram</Typography>
+              <Typography variant="body1" className="text-gray-300"><a href="https://www.instagram.com/sa_tya8037?igsh=MXBpcmw5b3I4bnVmMA==">Click</a></Typography>
+            </Box>
+          </Box>
+            <Box className="bg-[#3C3C3D] rounded-xl p-6 flex items-center gap-4">
             <LocationOnIcon className="text-amber-400 text-4xl" />
             <Box>
               <Typography variant="h6" className="font-semibold">Location</Typography>

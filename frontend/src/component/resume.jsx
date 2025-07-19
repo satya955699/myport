@@ -4,7 +4,7 @@ import Education from "./education";
 import AlignHorizontalLeftOutlinedIcon from '@mui/icons-material/AlignHorizontalLeftOutlined';
 
 function Resume() {
-  const frontend = ["HTML", "CSS", "JAVASCRIPT", 'TAILWINDCSS', 'REACT', 'BOOTSTRAP'];
+  const frontend = ["HTML", "CSS", "JAVASCRIPT", 'TAILWINDCSS', 'REACT','NextJs', 'BOOTSTRAP'];
   const backend = ["node js", "postgreSQL", "restAPI", "express.js", "github"];
 
   return (
@@ -28,7 +28,6 @@ function Resume() {
           <Education name={"Higher Secondary"} year={"2019-2021"} description={"Netaji Subhas Memorial City College , Cuttack"} />
           <Education name={"B-Tech"} year={"2022-2026"} description={"Odisha University Of Technology And Research, Bhubaneswar"} />
         </div>
-
         <div className="m-3">
           <div className="flex items-center space-x-4">
             <div className="px-2 bg-gray-900 rounded-xl place-content-center">
@@ -36,9 +35,10 @@ function Resume() {
             </div>
             <Typography variant="h5" className="font-extrabold">Course</Typography>
           </div>
+          <Education name={"Python Boot Camp"} year={"2022"} description={"youTube"} />
           <Education name={"Web-Devlopment"} year={"2023"} description={"Udemy"} />
           <Education name={"Data structure And Algorithms"} year={"2024"} description={"Udemy"} />
-          <Education name={"Python Boot Camp"} year={"2022"} description={"youTube"} />
+          <Education name={"AI ML"} year={"2025"} description={"CTTC,BHUBANESWAR"}/>
         </div>
         
         <div className="flex justify-center mt-6">
@@ -46,7 +46,6 @@ function Resume() {
         </div>
         <Divider sx={{ backgroundColor: "gray" }} />
         
-        {/* Responsive Skills Section */}
         <div className="mt-4 ml-2 sm:ml-8 md:ml-12">
           <div className="relative text-2xl sm:text-3xl">Frontend</div>
           <Divider className="bg-amber-300 w-11 h-1 rounded-2xl" />

@@ -1,13 +1,38 @@
-import cr from "../assets/cr.png"
+import cr from "../assets/cr2.png"
 import { Dialog, Divider, Typography } from "@mui/material";
-import Devider from "@mui/material/Divider"
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import CakeIcon from '@mui/icons-material/Cake';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 function left(){
+
+  const contactInfo = [
+  {
+    id: 1,
+    icon: <MailOutlineIcon />,
+    label: "Email",
+    value: "satyaprangya0@gmail.com"
+  },
+  {
+    id: 2,
+    icon: <SmartphoneIcon />,
+    label: "Phone",
+    value: "+91-9556995358"
+  },
+  {
+    id: 3,
+    icon: <CakeIcon />,
+    label: "Birthday",
+    value: "March 8, 2004"
+  },
+  {
+    id: 4,
+    icon: <LocationOnIcon />,
+    label: "Location",
+    value: "Bhubaneswar, Odisha"
+  }]
     return (
-         <div className=" md:flex hidden">
+         <div className="  flex">
 
         <div style={{backgroundColor:"#1E1E1F"}} className="    rounded-xl   p-6   "> 
         <div className=" w-full flex  justify-center">
@@ -17,7 +42,6 @@ function left(){
              </div>
         </div>
         <div className="  ">
-
              <Typography sx={{ display:"flex",justifyContent:"center"}}>
                 SATYAPRANGYA DASH 
              </Typography>
@@ -29,35 +53,22 @@ function left(){
              </div>
         </div>
              <Divider sx={{backgroundColor:"white"}}/>
+             {contactInfo.map((e)=>{
+              return(
+                  <div key={e.id} className=" font-bold   my-5 flex">
+                <div  className="  text-amber-300   bg-gray-900   p-1.5   rounded-xl flex justify-center   items-center    mx-2 ">{e.icon}</div>
+                <div>
+                    <Typography  sx={{fontWeight:10,color:'gray', fontSize:"10px"}}>{e.label}</Typography>
+                    <Typography  sx={{ fontSize:"18px"}}>{e.value}</Typography>
+                </div>
+             </div>
+                
+              )
+             })}
              
-             <div className="   my-5 flex">
-                <div  className="  text-amber-300   bg-gray-900   p-1.5   rounded-xl flex justify-center   items-center    mx-2 "><MailOutlineIcon/></div>
-                <div>
-                    <Typography  sx={{fontWeight:10,color:'gray', fontSize:"10px"}}>Email</Typography>
-                    <Typography  sx={{ fontSize:"15px"}}>satyaprangya0@gmail.com</Typography>
-                </div>
-             </div>
-               <div className="   my-5 flex">
-                <div  className="  text-amber-300  bg-gray-900    p-1.5   rounded-xl flex justify-center   items-center    mx-2 "><SmartphoneIcon/></div>
-                <div>
-                    <Typography  sx={{fontWeight:10,color:'gray', fontSize:"10px"}}>Phone</Typography>
-                    <Typography  sx={{ fontSize:"15px"}}>+91-9556995358</Typography>
-                </div>
-             </div>
-               <div className="   my-5 flex">
-                <div  className="  text-amber-300  bg-gray-900    p-1.5   rounded-xl flex justify-center   items-center    mx-2 "><CakeIcon/></div>
-                <div>
-                    <Typography  sx={{fontWeight:10,color:'gray', fontSize:"10px"}}>Birthday</Typography>
-                    <Typography  sx={{ fontSize:"15px"}}>March8,2004</Typography>
-                </div>
-             </div>
-              <div className="   my-5 flex">
-                <div  className="  text-amber-300  bg-gray-900    p-1.5   rounded-xl flex justify-center   items-center    mx-2 "><LocationOnIcon/></div>
-                <div>
-                    <Typography  sx={{fontWeight:10,color:'gray', fontSize:"10px"}}>Location</Typography>
-                    <Typography  sx={{ fontSize:"15px"}}>Bhubaneswar,Odisha</Typography>
-                </div>
-             </div>
+           
+              
+           
         </div>
          </div>
     )

@@ -7,7 +7,7 @@ import Portfolio from "./portfolio"
 import gsap  from "gsap"
 import { useGSAP } from "@gsap/react"
 function main (){
-     const [comp,usecomp]=useState("Resume")
+     const [comp,usecomp]=useState("About")
 
 
 
@@ -24,10 +24,10 @@ function main (){
     }
     const Setselect=obj[comp]
     return(
-        <div style={{backgroundColor:"#1E1E1F", boxShadow:" 0 1px 12px #1E1E1F"}} className="  hide-scroll   rounded-xl overflow-y-auto   mx-5 w-[68vw]" >
+        <div style={{backgroundColor:"#1E1E1F", boxShadow:" 0 1px 12px #1E1E1F"}} className="  hide-scroll   md:rounded-xl overflow-y-auto   md:mx-5 md:w-[68vw] w-full" >
               
-              <div className=" md:flex hidden justify-end nav ">
-                 <ul className=" w-[60%] rounded-bl-4xl py-3   bg-[#3C3C3D] flex justify-around ">
+              <div className=" md:flex  justify-end nav ">
+                 <ul className=" md:w-[60%] md:rounded-bl-4xl py-3   bg-[#3C3C3D] flex justify-around ">
                     {Object.keys(obj).map((e)=>{
                         return(
                             

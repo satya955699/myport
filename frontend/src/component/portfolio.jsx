@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Divider, Box, Button } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { useNavigate } from "react-router-dom"
 import img2 from "../assets/img2.png"
 import img1 from "../assets/img1.png"
 import img3 from "..//assets/img3.png"
@@ -42,11 +43,11 @@ const projects = [
   technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "Redux"],
   imageUrl: img4,
   liveLink: "#",
-  githubLink: "#"
+  githubLink: "https://github.com/satya955699/"
 }
 ];
-
 function Portfolio() {
+  const navigate=useNavigate()
   return (
     <section id="portfolio" className="p-6 text-white">
       <div className="mb-8">
@@ -83,7 +84,7 @@ function Portfolio() {
               <Button
                 variant="contained"
                 startIcon={<OpenInNewIcon />}
-                href={project.liveLink}
+                onClick={()=>navigate("/construction")}
                 target="_blank"
                 sx={{ backgroundColor: '#2B2B2B', '&:hover': { backgroundColor: '#444444' } }}
               >
